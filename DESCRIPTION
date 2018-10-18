@@ -1,0 +1,31 @@
+Package: mirtjml
+Type: Package
+Title: Joint Maximum Likelihood Estimation for High-dimensional Exploratory Item Factor Analysis
+Version: 1.0
+Date: 2018-09-25
+Authors@R: c(
+    person("Siliang", "Zhang", email = "zhangsiliang123@gmail.com", role = c("aut", "cre")),
+    person("Yunxiao", "Chen", email = "yx.chen1988@gmail.com", role = "aut"),
+    person("Xiaoou", "Li", email = "xiaoou1989@gmail.com" , role = "aut")
+    )
+Maintainer: Siliang Zhang <zhangsiliang123@gmail.com>
+Description: The mirtjml package provides powerful functions for solving modern high
+  dimensional item factor analysis problem. For dataset with large number of examinees,
+  items and when the latent dimension becomes very high, the traditional methods become
+  unusable due to the computation burden. Even for the state-of-art method like MH-RM,
+  the estimation for dataset with sample size N=1e4, item size J=1e3 is still beyond 
+  it's capability. The package uses alternating minimization algorithm for the 
+  optimization procedure and multiprocessing OpenMP API is utilized to unshackle the
+  computing power on the modern multi-core machines. For example, the package can fit
+  a dataset (do an exploratory item factor analysis) with 125,000 respondents, 
+  500 items, and 10 latent traits within 3 minutes on a single 
+  Intel® machine(i7CPU@5650U@2.2 GHz.) with four cores.
+License: GPL-2
+Depends: R (>= 3.5.0)
+Imports: Rcpp (>= 0.12.18), GPArotation
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.1.0
+Encoding: UTF-8
+Author: Siliang Zhang [aut, cre],
+    Yunxiao Chen [aut],
+    Xiaoou Li [aut]
